@@ -1,17 +1,147 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #111;
-    color: white;
+  font-family: 'Inter', sans-serif;
+  background-color: #0b0f0c;
+  color: #e5e5e5;
+  line-height: 1.6;
 }
 
-header {
-    background-color: #0a7f3f; /* verde destaque */
-    padding: 20px;
-    text-align: center;
+/* HEADER */
+
+.header {
+  position: fixed;
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(11, 15, 12, 0.7);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
 }
 
-section {
-    text-align: center;
-    margin-top: 80px;
+.logo {
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: #00ff88;
+}
+
+.nav a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: #ccc;
+  font-weight: 400;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: #00ff88;
+}
+
+/* HERO */
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+  background: radial-gradient(circle at 30% 50%, rgba(0,255,136,0.08), transparent 60%);
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 52px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.hero p {
+  font-size: 20px;
+  color: #aaa;
+  margin-bottom: 40px;
+}
+
+.hero-buttons a {
+  padding: 14px 32px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-right: 20px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background: #00ff88;
+  color: #0b0f0c;
+}
+
+.btn-primary:hover {
+  background: #00cc6a;
+}
+
+.btn-secondary {
+  border: 1px solid #00ff88;
+  color: #00ff88;
+}
+
+.btn-secondary:hover {
+  background: #00ff88;
+  color: #0b0f0c;
+}
+
+/* SECTIONS */
+
+.section {
+  padding: 120px 60px;
+}
+
+.section h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #00ff88;
+}
+
+.dark {
+  background-color: #0f1411;
+}
+
+/* GRID */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  padding: 40px;
+  background: #111815;
+  border: 1px solid rgba(0,255,136,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #00ff88;
+}
+
+/* FOOTER */
+
+.footer {
+  padding: 40px;
+  text-align: center;
+  background: #0b0f0c;
+  font-size: 14px;
+  color: #777;
 }
