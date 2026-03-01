@@ -1,7 +1,4 @@
-/* =========================
-   RESET
-========================= */
-
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -10,162 +7,177 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #0a0f0d;
-  color: #e8e8e8;
-  line-height: 1.6;
+  background: #0c0c0f;
+  color: #ffffff;
   overflow-x: hidden;
 }
 
-/* =========================
-   HEADER
-========================= */
-
+/* HEADER */
 .header {
   position: fixed;
   width: 100%;
-  padding: 30px 100px;
+  top: 0;
+  padding: 20px 8%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: transparent;
+  background: rgba(12,12,15,0.6);
+  backdrop-filter: blur(10px);
   z-index: 1000;
 }
 
 .logo {
+  font-weight: 800;
+  letter-spacing: 2px;
   font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 4px;
   text-transform: uppercase;
-  color: #ffffff;
 }
 
 .nav a {
-  margin-left: 50px;
+  margin-left: 30px;
   text-decoration: none;
-  color: #9aa09c;
-  font-size: 14px;
-  letter-spacing: 1px;
-  transition: 0.3s ease;
+  color: #aaa;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
 .nav a:hover {
-  color: #00d27a;
+  color: #ffffff;
 }
 
-/* =========================
-   HERO
-========================= */
-
+/* HERO */
 .hero {
   height: 100vh;
   display: flex;
   align-items: center;
-  padding: 0 100px;
-  background: radial-gradient(circle at 70% 40%, rgba(0,210,122,0.08), transparent 60%),
-              linear-gradient(to bottom, #0a0f0d 0%, #111815 100%);
+  padding: 0 8%;
+  position: relative;
+  background: radial-gradient(circle at 20% 40%, rgba(255,255,255,0.08), transparent 40%),
+              radial-gradient(circle at 80% 60%, rgba(255,255,255,0.05), transparent 40%),
+              #0c0c0f;
 }
 
 .hero-content {
-  max-width: 800px;
+  max-width: 700px;
+  animation: fadeUp 1.2s ease forwards;
 }
 
 .hero h1 {
-  font-size: 78px;
+  font-size: 56px;
   font-weight: 800;
-  line-height: 1.05;
-  margin-bottom: 30px;
-  color: #ffffff;
+  line-height: 1.1;
+  margin-bottom: 20px;
 }
 
 .hero p {
-  font-size: 22px;
-  color: #8c8f8d;
-  margin-bottom: 50px;
+  font-size: 18px;
+  color: #aaa;
+  margin-bottom: 40px;
 }
 
 .hero-buttons a {
-  padding: 16px 38px;
+  padding: 14px 30px;
+  border-radius: 40px;
   text-decoration: none;
   font-weight: 600;
-  border-radius: 6px;
-  margin-right: 25px;
-  transition: 0.3s ease;
+  margin-right: 20px;
+  transition: 0.3s;
 }
 
 .btn-primary {
-  background: #00d27a;
-  color: #0a0f0d;
+  background: #ffffff;
+  color: #0c0c0f;
 }
 
 .btn-primary:hover {
-  background: #00b368;
+  transform: translateY(-3px);
 }
 
 .btn-secondary {
-  border: 1px solid #00d27a;
-  color: #00d27a;
-}
-
-.btn-secondary:hover {
-  background: #00d27a;
-  color: #0a0f0d;
-}
-
-/* =========================
-   SECTIONS
-========================= */
-
-.section {
-  padding: 160px 100px;
-}
-
-.section h2 {
-  font-size: 42px;
-  margin-bottom: 60px;
+  border: 1px solid #ffffff30;
   color: #ffffff;
 }
 
+.btn-secondary:hover {
+  background: #ffffff10;
+}
+
+/* SECTIONS */
+.section {
+  padding: 120px 8%;
+}
+
+.section h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
 .section p {
-  max-width: 700px;
-  font-size: 18px;
-  color: #9aa09c;
+  max-width: 600px;
+  color: #aaa;
+  line-height: 1.6;
 }
 
 .dark {
-  background-color: #0f1613;
+  background: #111114;
 }
 
-/* =========================
-   GRID
-========================= */
-
+/* GRID CARDS */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
 }
 
 .card {
-  padding: 50px;
-  background: #131b18;
-  border: 1px solid rgba(0,210,122,0.08);
-  transition: all 0.4s ease;
+  padding: 40px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #141418, #0e0e11);
+  border: 1px solid #ffffff10;
+  transition: 0.4s;
+  font-weight: 500;
 }
 
 .card:hover {
   transform: translateY(-8px);
-  border-color: #00d27a;
-  background: #16221e;
+  border: 1px solid #ffffff30;
 }
 
-/* =========================
-   FOOTER
-========================= */
-
+/* FOOTER */
 .footer {
-  padding: 60px;
+  padding: 40px 8%;
   text-align: center;
   font-size: 14px;
-  color: #6f7471;
-  background: #0a0f0d;
+  color: #666;
+  border-top: 1px solid #ffffff10;
+}
+
+/* ANIMAÇÕES */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVO */
+@media(max-width: 900px) {
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .section {
+    padding: 80px 8%;
+  }
+
 }
