@@ -1,4 +1,7 @@
-/* RESET */
+/* =========================
+   RESET
+========================= */
+
 * {
   margin: 0;
   padding: 0;
@@ -7,141 +10,162 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #0b0f0c;
-  color: #e5e5e5;
+  background-color: #0a0f0d;
+  color: #e8e8e8;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 
 .header {
   position: fixed;
   width: 100%;
-  padding: 20px 60px;
+  padding: 30px 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(11, 15, 12, 0.7);
-  backdrop-filter: blur(8px);
+  background: transparent;
   z-index: 1000;
 }
 
 .logo {
-  font-weight: 800;
-  font-size: 18px;
-  letter-spacing: 2px;
-  color: #00ff88;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #ffffff;
 }
 
 .nav a {
-  margin-left: 30px;
+  margin-left: 50px;
   text-decoration: none;
-  color: #ccc;
-  font-weight: 400;
-  transition: 0.3s;
+  color: #9aa09c;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
 }
 
 .nav a:hover {
-  color: #00ff88;
+  color: #00d27a;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero {
   height: 100vh;
   display: flex;
   align-items: center;
-  padding: 0 60px;
-  background: radial-gradient(circle at 30% 50%, rgba(0,255,136,0.08), transparent 60%);
+  padding: 0 100px;
+  background: radial-gradient(circle at 70% 40%, rgba(0,210,122,0.08), transparent 60%),
+              linear-gradient(to bottom, #0a0f0d 0%, #111815 100%);
 }
 
 .hero-content {
-  max-width: 700px;
+  max-width: 800px;
 }
 
 .hero h1 {
-  font-size: 52px;
+  font-size: 78px;
   font-weight: 800;
-  margin-bottom: 20px;
-  line-height: 1.1;
+  line-height: 1.05;
+  margin-bottom: 30px;
+  color: #ffffff;
 }
 
 .hero p {
-  font-size: 20px;
-  color: #aaa;
-  margin-bottom: 40px;
+  font-size: 22px;
+  color: #8c8f8d;
+  margin-bottom: 50px;
 }
 
 .hero-buttons a {
-  padding: 14px 32px;
+  padding: 16px 38px;
   text-decoration: none;
   font-weight: 600;
-  margin-right: 20px;
-  border-radius: 4px;
-  transition: 0.3s;
+  border-radius: 6px;
+  margin-right: 25px;
+  transition: 0.3s ease;
 }
 
 .btn-primary {
-  background: #00ff88;
-  color: #0b0f0c;
+  background: #00d27a;
+  color: #0a0f0d;
 }
 
 .btn-primary:hover {
-  background: #00cc6a;
+  background: #00b368;
 }
 
 .btn-secondary {
-  border: 1px solid #00ff88;
-  color: #00ff88;
+  border: 1px solid #00d27a;
+  color: #00d27a;
 }
 
 .btn-secondary:hover {
-  background: #00ff88;
-  color: #0b0f0c;
+  background: #00d27a;
+  color: #0a0f0d;
 }
 
-/* SECTIONS */
+/* =========================
+   SECTIONS
+========================= */
 
 .section {
-  padding: 120px 60px;
+  padding: 160px 100px;
 }
 
 .section h2 {
-  font-size: 36px;
-  margin-bottom: 40px;
-  color: #00ff88;
+  font-size: 42px;
+  margin-bottom: 60px;
+  color: #ffffff;
+}
+
+.section p {
+  max-width: 700px;
+  font-size: 18px;
+  color: #9aa09c;
 }
 
 .dark {
-  background-color: #0f1411;
+  background-color: #0f1613;
 }
 
-/* GRID */
+/* =========================
+   GRID
+========================= */
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
 }
 
 .card {
-  padding: 40px;
-  background: #111815;
-  border: 1px solid rgba(0,255,136,0.1);
-  transition: 0.3s;
+  padding: 50px;
+  background: #131b18;
+  border: 1px solid rgba(0,210,122,0.08);
+  transition: all 0.4s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  border-color: #00ff88;
+  transform: translateY(-8px);
+  border-color: #00d27a;
+  background: #16221e;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 .footer {
-  padding: 40px;
+  padding: 60px;
   text-align: center;
-  background: #0b0f0c;
   font-size: 14px;
-  color: #777;
+  color: #6f7471;
+  background: #0a0f0d;
 }
