@@ -32,7 +32,6 @@ body {
   color: #fff;
   text-decoration: none;
   margin-left: 30px;
-  font-weight: 500;
 }
 
 /* HERO */
@@ -145,23 +144,28 @@ body {
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
 }
 
+/* PADRÃO PROFISSIONAL 16:9 */
+
 .portfolio-item {
-  background: #1a1a1a;
-  padding: 10px;
+  position: relative;
+  aspect-ratio: 16 / 9;   /* PROPORÇÃO CINEMA */
+  overflow: hidden;
   border-radius: 12px;
 }
 
-/* AQUI ESTÁ A CORREÇÃO REAL */
-
 .portfolio-item img {
   width: 100%;
-  height: auto;        /* NÃO FORÇA ALTURA */
-  display: block;
-  border-radius: 8px;
+  height: 100%;
+  object-fit: cover;      /* CORTA BONITO */
+  transition: 0.4s ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.08);
 }
 
 /* FOOTER */
