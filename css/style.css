@@ -19,15 +19,13 @@ body {
   padding: 25px 8%;
   position: fixed;
   width: 100%;
-  background: rgba(0,0,0,0.85);
-  backdrop-filter: blur(8px);
+  background: rgba(0,0,0,0.9);
   z-index: 1000;
 }
 
 .logo {
   font-size: 22px;
   font-weight: 800;
-  letter-spacing: 2px;
 }
 
 .nav a {
@@ -35,11 +33,6 @@ body {
   text-decoration: none;
   margin-left: 30px;
   font-weight: 500;
-  transition: 0.3s;
-}
-
-.nav a:hover {
-  opacity: 0.6;
 }
 
 /* HERO */
@@ -59,7 +52,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.65);
 }
 
 .hero-content {
@@ -79,6 +72,8 @@ body {
   opacity: 0.85;
 }
 
+/* BOTÕES */
+
 .hero-buttons {
   display: flex;
   justify-content: center;
@@ -92,7 +87,6 @@ body {
   border-radius: 40px;
   text-decoration: none;
   font-weight: 600;
-  transition: 0.3s;
 }
 
 .btn-primary {
@@ -103,11 +97,6 @@ body {
 .btn-secondary {
   border: 1px solid #fff;
   color: #fff;
-}
-
-.btn-primary:hover,
-.btn-secondary:hover {
-  transform: scale(1.05);
 }
 
 /* SEÇÕES */
@@ -139,12 +128,6 @@ body {
   background: #1c1c1c;
   padding: 30px;
   border-radius: 12px;
-  transition: 0.3s;
-}
-
-.card:hover {
-  background: #242424;
-  transform: translateY(-5px);
 }
 
 /* PROJETOS CONCLUÍDOS */
@@ -162,30 +145,26 @@ body {
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
 }
 
-/* AQUI ESTÁ A CORREÇÃO */
-
 .portfolio-item {
-  overflow: hidden;
+  background: #1a1a1a;
+  padding: 10px;
   border-radius: 12px;
-  height: 220px; /* ALTURA CONTROLADA */
 }
+
+/* AQUI ESTÁ A CORREÇÃO REAL */
 
 .portfolio-item img {
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* CORTA BONITO */
-  transition: 0.4s ease;
+  height: auto;        /* NÃO FORÇA ALTURA */
+  display: block;
+  border-radius: 8px;
 }
 
-.portfolio-item img:hover {
-  transform: scale(1.08);
-}
-
-/* CONTATO */
+/* FOOTER */
 
 .footer {
   text-align: center;
@@ -209,10 +188,6 @@ body {
 
   .nav {
     display: none;
-  }
-
-  .portfolio-item {
-    height: 180px;
   }
 
 }
