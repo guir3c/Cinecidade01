@@ -29,8 +29,6 @@
   border-radius: 12px;
 }
 
-/* IMAGEM */
-
 .portfolio-item img {
   width: 100%;
   height: 100%;
@@ -66,7 +64,7 @@
   opacity: 1;
 }
 
-/* RESPONSIVO */
+/* RESPONSIVO (AJUSTE FINAL MOBILE) */
 
 @media (max-width: 768px) {
 
@@ -79,8 +77,19 @@
     gap: 20px;
   }
 
+  /* A imagem não vai mais sair da tela, vai ser bem ajustada */
+  .portfolio-item {
+    aspect-ratio: 16 / 9;
+  }
+
+  /* Para o título do projeto */
   .overlay-text h3 {
     font-size: 15px;
+  }
+
+  /* Ajuste das bordas e espaço do rodapé */
+  .footer {
+    padding: 20px;
   }
 
 }
