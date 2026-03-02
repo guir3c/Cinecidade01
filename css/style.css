@@ -2,13 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: #0f0f0f;
-  color: #ffffff;
-  line-height: 1.6;
+  background: #0e0e0e;
+  color: #fff;
 }
 
 /* HEADER */
@@ -18,24 +17,25 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 25px 8%;
-  background: #0f0f0f;
   position: fixed;
   width: 100%;
-  top: 0;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(8px);
   z-index: 1000;
 }
 
 .logo {
+  font-size: 22px;
   font-weight: 800;
-  font-size: 1.2rem;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 .nav a {
-  margin-left: 25px;
+  color: #fff;
   text-decoration: none;
-  color: #ffffff;
-  font-weight: 400;
+  margin-left: 30px;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
 .nav a:hover {
@@ -45,94 +45,88 @@ body {
 /* HERO */
 
 .hero {
-  position: relative;
   height: 100vh;
+  background: url('https://images.unsplash.com/photo-1485846234645-a62644f84728') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 0 8%;
-  background: url('https://images.unsplash.com/photo-1492724441997-5dc865305da7') no-repeat center center/cover;
+  padding: 0 20px;
+  position: relative;
 }
 
 .overlay {
   position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.75);
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
 }
 
 .hero-content {
   position: relative;
-  z-index: 2;
   max-width: 900px;
 }
 
 .hero h1 {
-  font-size: 2.4rem;
-  font-weight: 800;
+  font-size: 42px;
   margin-bottom: 20px;
+  font-weight: 800;
 }
 
 .hero p {
-  font-size: 1.1rem;
-  font-weight: 300;
-  margin-bottom: 40px;
+  font-size: 18px;
+  margin-bottom: 30px;
+  opacity: 0.85;
 }
-
-/* BUTTONS */
 
 .hero-buttons {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 15px;
   flex-wrap: wrap;
 }
 
 .btn-primary,
 .btn-secondary {
-  padding: 14px 28px;
+  padding: 12px 28px;
+  border-radius: 40px;
   text-decoration: none;
   font-weight: 600;
-  border-radius: 4px;
   transition: 0.3s;
 }
 
 .btn-primary {
-  background: #ffffff;
-  color: #000000;
-}
-
-.btn-primary:hover {
-  background: #cccccc;
+  background: #fff;
+  color: #000;
 }
 
 .btn-secondary {
-  border: 1px solid #ffffff;
-  color: #ffffff;
+  border: 1px solid #fff;
+  color: #fff;
 }
 
+.btn-primary:hover,
 .btn-secondary:hover {
-  background: #ffffff;
-  color: #000000;
+  transform: scale(1.05);
 }
 
-/* SECTIONS */
+/* SEÇÕES */
 
 .section {
-  padding: 120px 8%;
+  padding: 100px 8%;
   text-align: center;
 }
 
 .section.dark {
-  background: #161616;
+  background: #151515;
 }
 
 .section h2 {
-  font-size: 2rem;
+  font-size: 32px;
   margin-bottom: 30px;
 }
 
-/* GRID */
+/* CARDS */
 
 .grid {
   display: grid;
@@ -142,61 +136,83 @@ body {
 }
 
 .card {
-  padding: 40px 20px;
-  background: #1f1f1f;
-  border-radius: 6px;
+  background: #1c1c1c;
+  padding: 30px;
+  border-radius: 12px;
   transition: 0.3s;
 }
 
 .card:hover {
-  background: #292929;
+  background: #242424;
+  transform: translateY(-5px);
 }
 
-/* FOOTER */
+/* PROJETOS CONCLUÍDOS */
+
+.portfolio {
+  padding: 100px 8%;
+  background: #0e0e0e;
+  text-align: center;
+}
+
+.portfolio h2 {
+  font-size: 32px;
+  margin-bottom: 50px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* AQUI ESTÁ A CORREÇÃO */
+
+.portfolio-item {
+  overflow: hidden;
+  border-radius: 12px;
+  height: 220px; /* ALTURA CONTROLADA */
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* CORTA BONITO */
+  transition: 0.4s ease;
+}
+
+.portfolio-item img:hover {
+  transform: scale(1.08);
+}
+
+/* CONTATO */
 
 .footer {
   text-align: center;
   padding: 30px;
-  background: #0a0a0a;
-  font-size: 0.9rem;
+  background: #000;
+  font-size: 14px;
+  opacity: 0.6;
 }
 
 /* RESPONSIVO */
 
 @media (max-width: 768px) {
 
-  .header {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .nav a {
-    margin: 0 10px;
-  }
-
-  .hero {
-    height: auto;
-    padding: 140px 8% 80px;
-  }
-
   .hero h1 {
-    font-size: 1.8rem;
+    font-size: 28px;
   }
 
   .hero p {
-    font-size: 1rem;
+    font-size: 16px;
   }
 
-  .hero-buttons {
-    flex-direction: column;
-    align-items: center;
+  .nav {
+    display: none;
   }
 
-  .btn-primary,
-  .btn-secondary {
-    width: 100%;
-    max-width: 280px;
-    text-align: center;
+  .portfolio-item {
+    height: 180px;
   }
 
 }
