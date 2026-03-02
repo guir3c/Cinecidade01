@@ -4,12 +4,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 html, body {
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: hidden;  /* Impede rolagem horizontal */
 }
 
 body {
@@ -93,10 +93,12 @@ body {
   gap: 25px;
 }
 
+/* CARD */
+
 .portfolio-item {
   position: relative;
   width: 100%;
-  aspect-ratio: 16/9;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   border-radius: 10px;
 }
@@ -108,12 +110,15 @@ body {
   transition: transform 0.4s ease;
 }
 
+/* TÍTULO SOBRE A IMAGEM */
+
 .overlay-text {
   position: absolute;
   bottom: 0;
   width: 100%;
   padding: 15px;
   background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+  color: #fff;
   opacity: 0;
   transition: opacity 0.4s ease;
 }
@@ -143,8 +148,11 @@ body {
 
 @media (max-width: 768px) {
 
-  .portfolio-grid {
-    grid-template-columns: 1fr;
+  /* HERO */
+  .hero {
+    height: 80vh;
+    background-position: top center;
+    padding: 0 10px;
   }
 
   .hero h1 {
@@ -153,6 +161,26 @@ body {
 
   .hero p {
     font-size: 16px;
+  }
+
+  /* GRID NO MOBILE */
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* CARD - IMAGEM */
+  .portfolio-item {
+    aspect-ratio: 16 / 9;
+  }
+
+  .overlay-text h3 {
+    font-size: 15px;
+  }
+
+  /* AJUSTE DAS BORDAS E ESPAÇO DO RODAPÉ */
+  .footer {
+    padding: 20px;
   }
 
 }
